@@ -46,6 +46,231 @@
                 <header>
                     <h2 id="balises-html-de-contenu-de-texte">Balises HTML de contenu de texte</h2>
                 </header>
+                <h3>Les paragraphes</h3>
+                <p>
+                    Les paragraphes séparent naturellement les blocs de texte en vertical, mais s'il y a besoin d'un
+                    retour chariot au sein d'un paragraphe :<br />
+                    <code>&lt;br /&gt;</code>.<br />
+                    La balise "br" permet donc un retour "à la ligne" dans un paragraphe.
+                </p>
+                <h4>Exemple paragraphe et retour chariot</h4>
+                <p>
+                    Mon petit garçon
+                </p>
+                <p>
+                    Il n'est pas à l'école<br />
+                    donc je doit télétravailler
+                </p>
+                <h3>Les listes</h3>
+                <p>
+                    Les listes sont équivalentes aux paragraphes dans la hièrarchie des balises. Il faut donc les
+                    déclarer à l'extérieur des paragraphes
+                </p>
+                <h4>Les listes "non-ordonnées"</h4>
+                <h5>Les listes à un seul niveau</h5>
+                <ul>
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
+                </ul>
+                <h5>Les listes à plusieurs niveaux</h5>
+                <ul>
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
+                    <li>élément de liste
+                        <ul>
+                            <li>élément de sous-liste</li>
+                            <li>élément de sous-liste
+                                <ul>
+                                    <li>élément de sous-sous-liste</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>élément de liste</li>
+                </ul>
+                <h4>Les listes "ordonnées"</h4>
+                <h5>Les listes à un seul niveau</h5>
+                <ol>
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
+                </ol>
+                <ol type="I">
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
+                </ol>
+                <ol type="a" reversed>
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
+                </ol>
+                <h5>Les listes à plusieurs niveau</h5>
+                <ol>
+                    <li>élément de liste</li>
+                    <li>élément de liste
+                        <ol type="a">
+                            <li>élément de sous-liste</li>
+                            <li>élément de sous-liste
+                                <ul type="disc">
+                                    <li>élément de sous-sous-liste</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
+                </ol>
+                <p>
+                    J'interromp ma liste par un paragraphe et je le reprend ensuite
+                </p>
+                <ol start="5">
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
+                </ol>
+                <h3>Les listes "descriptives"</h3>
+                <dl>
+                    <dt>étiquette de l'élément à décrire</dt>
+                    <dd>Définition de la description</dd>
+                    
+                    <dt>seconde étiquette de l'élément à décrire</dt>
+                    <dd>Définition de la description</dd>
+                </dl>
+                <h3>Les blocs citation</h3>
+                <blockquote>
+                    <p>
+                        La balise <code>&lt;blockquote&gt;</code> met en exergue son contenu, en appliquant des marges
+                        extérieurs à gauche et à droite.
+                    </p>
+                </blockquote>
+                <p>
+                    Il convient, pour bien référencer une citation, de la compléter avec des balises adaptées
+                </p>
+                <blockquote>
+                    <p>
+                        <q cite="https://fr.wikiquote.org/wiki/Terry_Pratchett#Au_guet_!,_1989">Si les clichés
+                            deviennent des clichés, c'est qu'ils sont les marteaux et les tournevis dans la boîte à
+                            outils de la communication</q>
+                    </p>
+                    <p>
+                        <cite>Au guet ! (1989), Terry Pratchett (trad. Patrick Couton), éd. L'Atalante, 1997</cite>
+                    </p>
+                </blockquote>
+                <h3>Les tableaux</h3>
+                <style>
+                    /* # permet de préciser que le sélecteur CSS fait référence à un élément de la page ayant pour id les caractères qui suivent le # 
+                    #exemple-de-tableau => <element id="exemple-de-tableau"></element> */
+                    #exemple-de-tableau,
+                    #tableau-simple{
+                        border-collapse: collapse;
+                    }
+                    /* ici on cherche des éléments td et th qui sont dans la descendance d'un élément ayant pour id exemple-de-tableau */
+                    #exemple-de-tableau td,
+                    #exemple-de-tableau th,
+                    #tableau-simple td,
+                    #tableau-simple th
+                    {
+                        border: 1px solid black;
+                    }
+                </style>
+                <table id="exemple-de-tableau">
+                    <caption>Exemple de tableau</caption>
+                    <thead>
+                        <tr>
+                            <th>Entête n°1</th>
+                            <th>Entête n°2</th>
+                            <th>Entête n°3</th>
+                            <th>Entête n°4</th>
+                            <th>Entête n°5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" rowspan="2">01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>pied n°1</th>
+                            <th>pied n°2</th>
+                            <th>pied n°3</th>
+                            <th>pied n°4</th>
+                            <th>pied n°5</th>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p>
+                    Tableau plus simple
+                </p>
+                <table id="tableau-simple">
+                    <tr>
+                        <td style="border: none"></td>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>6</td>
+                    </tr>
+                </table>
             </article>
             <article>
                 <header>
