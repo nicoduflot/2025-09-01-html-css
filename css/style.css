@@ -1,0 +1,31 @@
+
+/* Emplacement du root : déclarations de surcharge de la feuille de style user agent */
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    /* il est possible d'utiliser ce qu'on appel des variables en css */
+    --base-font-size: 1.2rem; /* sur chrome, 1rem de base c'est 16px, avec cette déclaration, je change le rem de base => (20%16px) => 19.2px */
+    font-size: var(--base-font-size);
+    --line-height: 1.6rem;
+    line-height: var(--line-height);
+    scroll-behavior: smooth;
+}
+
+
+
+#exemple-de-tableau,
+#tableau-simple {
+  border-collapse: collapse;
+}
+
+#exemple-de-tableau td,
+#exemple-de-tableau th,
+#tableau-simple td,
+#tableau-simple th {
+  border: 1px solid black;
+}
+
+.danger {
+  color: darkorange;
+  font-family: Impact;
+  background-color: black;
+}
