@@ -13,20 +13,24 @@
 </head>
 <body>
     <header role="banner" id="top">
-        <span>Formation HTML - CSS3</span>
-        <p>
-            Support / site fait durant la formation HTML - CSS des promos UI-UX
-        </p>
+        <div class="container">
+            <span>Formation HTML - CSS3</span>
+            <p>
+                Support / site fait durant la formation HTML - CSS des promos UI-UX
+            </p>
+        </div>
     </header>
     <nav role="navigation">
-        <ul>
-            <li><a href="./index.html" title="Introduction au HTML">Introduction</a></li>
-            <li><a href="./media.html" title="Ajouter des media sur une page">Media</a></li>
-            <li><a href="./contact.html" title="Ajouter un formulaire sur une page">Contact</a></li>
-            <li><a href="./exercice-01.html" title="Mise en pratique HTML - CSS3">Exercice</a></li>
-        </ul>
+        <div class="container">
+            <ul>
+                <li><a href="./index.html" title="Introduction au HTML">Introduction</a></li>
+                <li><a href="./media.html" title="Ajouter des media sur une page">Media</a></li>
+                <li><a href="./contact.html" title="Ajouter un formulaire sur une page">Contact</a></li>
+                <li><a href="./exercice-01.html" title="Mise en pratique HTML - CSS3">Exercice</a></li>
+            </ul>
+        </div>
     </nav>
-    <main>
+    <main class="container">
         <header>
             <h1>Introduction au HTML</h1>
         </header>
@@ -468,11 +472,32 @@
                 <header>
                     <h2 id="le-css-adaptatif">Le CSS adaptatif</h2>
                 </header>
+                <p>
+                    Le CSS dit adaptatif (ou plus communément appelé RWD - Responsive Web Design) permet d'adapter l'affichage d'un site sur selon l'appareil utilisé.
+                </p>
+                <p>
+                    Donc, un site s'affichant correctement sur smartphone (en prenant en compte la lisibilité et l'accessibilité) doit pouvoir s'adapter sous une forme différente sur des écrans plus grands (tablette ou PC)
+                </p>
+                <p>
+                    Pour ce faire, on va écrire dans le CSS des surcharges ou des nouvelles règles CSS quand la largeur de l'écran atteint ou dépasse une largeur définie, en utilisant les <code>media queries</code>
+                </p>
+                <h3>Les media-queries</h3>
+                <p>
+                    Les media queries permettent de surcharger ou d'ajouter des comportements CSS par rapport, entre autres, à l'affichage du site sur l'appareil : largeur d'affichage  (viewport), l'orientation (portrait ou paysage), etc.
+                </p>
+                <p>
+                    Il est recommandé d'écrire le CSS d'un site en smartphone-first. La plupart des visiteurs de site naviguent à l'aide d'un smartphone. De plus le CSS de base sans media-queries est déstiné uniquement à l'affichage sur smartphone. Cela permet d'écrire quasiement tout le CSS d'un site, les surcharges ou ajouts de CSS dans les media-queries ne représentant qu'une partie infime du fichier CSS total.
+                </p>
+                <p>
+                    Si on fait la mise en page en premier lieu pour un écran plus grand, les réécriture et surcharge de CSS seront beaucoup plus importante, ce qui génèrera un fichier CSS très gros et surtout très difficile à maintenir.
+                </p>
             </article>
         </section>
     </main>
     <footer>
-        &copy; DAWAN - 2025 - Septembre
+        <div class="container">
+            &copy; DAWAN - 2025 - Septembre
+        </div>
     </footer>
     <div class="go-top">
         <a href="#top">Retour en haut</a>

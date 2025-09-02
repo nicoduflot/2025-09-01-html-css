@@ -75,6 +75,59 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage de l'appareil
     display: block;
 }
 
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* déclarations de structure */
 
+body{
+    margin: 0;
+}
+
+body > header,
+body > nav,
+body > main,
+body > footer{
+    padding: 0.5rem;
+}
+
 /* Déclaration CSS adaptatifs avec les media queries */
+
+@media print{
+    /* il faut se dire que le viewport d'un print est la page sur laquelle on imprime => si un élément doit apparaître en screen à 10px du haut du viewport, il apparaître sur toutes les pages (ou tous les viewports) qui s'imprimeront */
+    @page {
+        /* on force l'impression de la page en paysage */
+        size: landscape;
+        /* on ajoute à la page une marge intérieure de 1rem */
+        padding: 1rem;
+    }
+    /* il s'agit du footer, de la nav et du header ayant comme parent direct la balise body */
+    body > footer,
+    body > nav,
+    body > header,
+    .go-top
+    {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .container{
+        width: 540px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container{
+        width: 720px;
+    }
+}
+
+/*
+Selon les points de ruptures calculés par bootstrap, écrire les media-queries manquantes pour la classe container
+<576px	| ≥576px 	|≥768px 	|≥992px 	|≥1200px 	|≥1400px    |≥1600px
+100%	| 540px	    |720px	    |960px	    |1140px		|1320px     |1560px
+*/
