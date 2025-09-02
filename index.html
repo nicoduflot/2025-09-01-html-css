@@ -12,7 +12,7 @@
     <!-- balise style pour ajouter du css à la page -->
 </head>
 <body>
-    <header role="banner">
+    <header role="banner" id="top">
         <span>Formation HTML - CSS3</span>
         <p>
             Support / site fait durant la formation HTML - CSS des promos UI-UX
@@ -37,6 +37,7 @@
                     <li><a href="#balises-html-de-modification-du-texte">Balises HTML de modification du texte</a></li>
                     <li><a href="#mise-a-zero-du-css">Mise à "zéro" CSS</a></li>
                     <li><a href="#dimensions-web-en-css">Dimensions web en CSS</a></li>
+                    <li><a href="#les-positions">Les positions</a></li>
                     <li><a href="#le-css-adaptatif">Le CSS adaptatif</a></li>
                 </ul>
             </nav>
@@ -377,6 +378,91 @@
                 <header>
                     <h2 id="dimensions-web-en-css">Dimensions web en CSS" CSS</h2>
                 </header>
+                <p>
+                    Par défaut dans le css user agent (css du navigateur), quand on donne une taille (hauteur ou
+                    largeur) à un élément, la taille est calculée par rapport au contenu de l'élément, c'est à dire
+                    qu'elle ne prend pas en compte la taille des marges intérieures (padding) ou de la largeur des
+                    bordures.
+                </p>
+                <p>
+                    le calcul des "boîtes" est en fait mis par défaut à la valeur "content-box"
+                </p>
+                <div
+                    style="box-sizing: content-box; width: 200px; height: 100px; border: 3px solid black; padding: 5px;margin: 5px 0;">
+                </div>
+                <div
+                    style="box-sizing: border-box; width: 200px; height: 100px; border: 3px solid black; padding: 5px;margin: 5px 0;">
+                </div>
+            </article>
+            <article>
+                <div style="width: 10px; height: 10px;background-color: darkblue;position: sticky;top: 0;"></div>
+                <div style="width: 10px; height: 10px;background-color: darkblue;position: fixed;top: 0; left: 100px;"></div>
+                <header>
+                    <h2 id="les-positions">Les positions</h2>
+                </header>
+                <p>
+                    La propriété position permet d'afficher à l'écran des éléments ailleurs que là où ils sont déclarés
+                    dans le fichier HTML.
+                </p>
+                <p>
+                    les valeurs :
+                </p>
+                <ul>
+                    <li>
+                        static : par défaut pour les éléments
+                    </li>
+                    <li>
+                        Relative : l'élément est à sa position déclarée mais peut être décalé à l'aide des propriétés de
+                        type top, bottom, le décalage n'a pas d'impact sur les éléments suivants
+                    </li>
+                    <li>
+                        absolute : l'élément n'a plus de "contenance", les éléments suivants passeront "au travers" ou
+                        "en-dessous". Les propriétés de type top, bottom... le placeront par rapport son  ancètre le plus proche ayant la position relative.
+                    </li>
+                    <li>
+                        fixed : l'élément n'a plus de "contenance", les éléments suivants passeront "au travers" ou
+                        "en-dessous". Il est positionné par rapport au viewport et ne bougera pas quel que soit le
+                        défilement de la page.
+                    </li>
+                    <li>
+                        sticky : l'élément est tout d'abord placé selon son élément parent, mais lors du défilement
+                        vers le bas, bougera jusqu'à la disparition du viewport de l'élément parent, ensuite, il reste
+                        en haut du viewport avec le décalage indiqué par rapport à son élément parent.
+                    </li>
+                </ul>
+                <h3>Exemple positions relative et absolute</h3>
+                <style>
+                    .exemple-position{
+                        width: 300px;
+                        height: 300px;
+                        border-width: 3px;
+                        border-style:solid;
+                        border-color: black;
+                        position: relative;
+                    }
+
+                    /* D.R.Y. ou Don't Repeat Yourself */
+                    .carre-ex{
+                        width: 50px;
+                        height: 50px;
+                        opacity: 0.5;
+                    }
+
+                    .carre-rouge{
+                        background-color: darkred;
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                    }
+                    
+                    .carre-vert{
+                        background-color: darkgreen;
+                    }
+                </style>
+                <div class="exemple-position">
+                    <div class="carre-ex carre-rouge"></div>
+                    <div class="carre-ex carre-vert"></div>
+                </div>
             </article>
             <article>
                 <header>
@@ -388,5 +474,8 @@
     <footer>
         &copy; DAWAN - 2025 - Septembre
     </footer>
+    <div class="go-top">
+        <a href="#top">Retour en haut</a>
+    </div>
 </body>
 </html>
