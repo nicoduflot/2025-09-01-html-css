@@ -87,12 +87,54 @@ body{
     margin: 0;
 }
 
+body > *{
+    padding: 0 0.5rem;
+}
+
 body > header,
 body > nav,
-body > main,
 body > footer{
-    padding: 0.5rem;
+    background-color: #333;
+    color: white;
 }
+
+body > header p{
+    margin: 0;
+}
+
+body > nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+body > nav ul li{
+    border-bottom: 1px solid white;
+}
+
+body > nav ul li:last-child{
+    border-bottom: none;
+}
+
+body > nav ul a{
+    display: block;
+}
+
+body > nav ul a:hover,
+body > nav ul a:focus-visible{
+    background-color: white;
+    color: #333;
+    outline: none;
+}
+
+body > header a,
+body > nav a,
+body > footer a{
+    color: white;
+    text-decoration: none;
+}
+
+
 
 /* Déclaration CSS adaptatifs avec les media queries */
 
@@ -117,6 +159,25 @@ body > footer{
 @media screen and (min-width: 576px) {
     .container{
         width: 540px;
+    }
+
+    body > nav ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > nav ul li{
+        border-right: 1px solid white;
+        border-bottom: unset;
+    }
+    
+    body > nav ul li:last-child{
+        border-right: none;
+    }
+    
+    body > nav ul li a{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
 }
 
