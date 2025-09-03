@@ -122,6 +122,35 @@ figcaption{
     clear: both;
 }
 
+.img-carre-150{
+    width: 150px;
+    height: 150px;
+    /* l'objet à l'intérieur de la balise (généralement le fichier image appelé dans la balise img) sera contenu de trois façons dans l'espace réservé à la balise image (sa hauteur et sa largeur)
+    fill => l'image est déformée en hauteur et en largeur pour recouvrir l'intégralité de l'espace
+    contain => l'image est réduite en hauteur ou en largeur pour resté en homotétie mais des espaces libres apparaîtront sur ce qui n'est pas couvert par l'image
+    cover => l'image sera réduite mais "rognée" par rapport à l'affichage de la balise img
+    */
+    object-fit: cover;
+    /* object position : 
+    par défaut si non indiqué après la déclaration de l'object fit : center center (centré horizontalement et verticalement)
+    une valeur => change l'ohorizontal et vertical par defaut à center 
+    deux valeurs => la première représente l'horizontale, la seconde la verticale
+    */
+    object-position: center center;
+    background-color: #333;
+}
+
+.vignette{
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.moto{
+    background-image: url('../images/synthwave-vibe-james-white-signalnoise-w400.png');
+}
+
 /* déclarations de structure */
 
 body{
