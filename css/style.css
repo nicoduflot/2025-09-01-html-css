@@ -48,6 +48,8 @@ figcaption{
     text-align: left;
 }
 
+
+
 /* déclarations classes et id */
 #exemple-de-tableau,
 #tableau-simple {
@@ -149,6 +151,22 @@ figcaption{
 
 .moto{
     background-image: url('../images/synthwave-vibe-james-white-signalnoise-w400.png');
+}
+
+.player{
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.player:hover{
+    color: #333;
+    background-color: white;    
 }
 
 /* déclarations de structure */
