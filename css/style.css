@@ -1,6 +1,8 @@
+/* il faut importer le ou les fichiers css dans un autre fichier en PREMIER (sans compter les commentaires) */
+@import url('./bootstrap-icons.css');
+@import url('./LazenbyCompSmooth.css');
 
 /*
-
 Unités de tailles en CSS (en web)
 
 Unités les plus souvent utilisées en web
@@ -17,7 +19,6 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage de l'appareil
             50vh => 50% de la taille d'affichage du l'appareil
             si la largeur d'affichage du site 360px (100vw)
             50vw = 180px
-
 */
 
 /* déclarations générales */
@@ -79,6 +80,13 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage de l'appareil
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.site-title{
+    font-family: 'LazenbyCompSmooth';
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    letter-spacing: 0.15rem;
 }
 
 /* déclarations de structure */
@@ -185,6 +193,11 @@ body > footer a{
     .container{
         width: 720px;
     }
+
+    .site-title{
+        font-size: 2rem;
+    }
+
 }
 
 /*
@@ -202,6 +215,11 @@ Selon les points de ruptures calculés par bootstrap, écrire les media-queries 
 @media screen and (min-width: 1200px) {
     .container{
         width: 1140px;
+    }
+
+    .site-title{
+        font-size: 2.5rem;
+        line-height: 3rem;
     }
 }
 
