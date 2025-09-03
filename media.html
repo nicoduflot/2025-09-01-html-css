@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
 
     <!-- balise style pour ajouter du css à la page -->
 </head>
+
 <body>
     <header role="banner" id="top">
         <div class="container">
@@ -23,10 +25,14 @@
     <nav role="navigation">
         <div class="container">
             <ul>
-                <li><a href="./index.html" title="Introduction au HTML"><i class="bi bi-house-door-fill"></i> Introduction</a></li>
-                <li><a href="./media.html" title="Ajouter des media sur une page"><i class="bi bi-film"></i> Media</a></li>
-                <li><a href="./contact.html" title="Ajouter un formulaire sur une page"><i class="bi bi-envelope-paper"></i> Contact</a></li>
-                <li><a href="./exercice-01.html" title="Mise en pratique HTML - CSS3"><i class="bi bi-tools"></i> Exercice</a></li>
+                <li><a href="./index.html" title="Introduction au HTML"><i class="bi bi-house-door-fill"></i>
+                        Introduction</a></li>
+                <li><a href="./media.html" title="Ajouter des media sur une page"><i class="bi bi-film"></i> Media</a>
+                </li>
+                <li><a href="./contact.html" title="Ajouter un formulaire sur une page"><i
+                            class="bi bi-envelope-paper"></i> Contact</a></li>
+                <li><a href="./exercice-01.html" title="Mise en pratique HTML - CSS3"><i class="bi bi-tools"></i>
+                        Exercice</a></li>
             </ul>
         </div>
     </nav>
@@ -60,18 +66,26 @@
                     sa largeur, la hauteur qui le ratio (l'homothétie, le rapport hauter / largeur)
                 </p>
                 <p>
-                    Une image peut être appelé dans un paragraphe : <img src="./images/james-white-composite-400w.png" alt="Image composée de 9 miniatures représentant des illustration dans le style synthwave par le designer James White" class="img-fluid left" />, qui est intégrée dans le flux du texte du paragraphe.
+                    Une image peut être appelé dans un paragraphe : <img src="./images/james-white-composite-400w.png"
+                        alt="Image composée de 9 miniatures représentant des illustration dans le style synthwave par le designer James White"
+                        class="img-fluid left" />, qui est intégrée dans le flux du texte du paragraphe.
                 </p>
                 <p class="clear">
                     Images hors paragraphe :
                 </p>
-                <img src="./images/james-white-composite-400w.png" alt="Image composée de 9 miniatures représentant des illustration dans le style synthwave par le designer James White" class="img-fluid" />
+                <img src="./images/james-white-composite-400w.png"
+                    alt="Image composée de 9 miniatures représentant des illustration dans le style synthwave par le designer James White"
+                    class="img-fluid" />
                 <h3>Figure</h3>
                 <p>
-                    Il existe une balise conteneur pour les media, qui aide la sémantique web pour le référencement et l'accessibilité. la balise figure va encadrer un media, et donne la possibilité d'y ajouter une légende, avec la balise figcaption.
+                    Il existe une balise conteneur pour les media, qui aide la sémantique web pour le référencement et
+                    l'accessibilité. la balise figure va encadrer un media, et donne la possibilité d'y ajouter une
+                    légende, avec la balise figcaption.
                 </p>
                 <figure>
-                    <img loading="lazy" src="./images/synthwave-vibe-james-white-signalnoise-w400.png" alt="Illustration d'une moto et son motard avec un soleil couchant dans le style graphique synthwave" class="img-fluid" />
+                    <img loading="lazy" src="./images/synthwave-vibe-james-white-signalnoise-w400.png"
+                        alt="Illustration d'une moto et son motard avec un soleil couchant dans le style graphique synthwave"
+                        class="img-fluid" />
                     <figcaption>
                         Illustration pour une pochette d'album de music synthwave, créée par le designer James White
                     </figcaption>
@@ -119,10 +133,10 @@
                         <button onclick="playMedia('diablo')">Lecture</button>
                         <button onclick="pauseMedia('diablo')">pause</button>
                         <script>
-                            function playMedia(idCible){
+                            function playMedia(idCible) {
                                 document.getElementById(idCible).play();
                             }
-                            function pauseMedia(idCible){
+                            function pauseMedia(idCible) {
                                 document.getElementById(idCible).pause();
                             }
                         </script>
@@ -137,7 +151,8 @@
                     La balise vidéo se comporte comme la balise audio.
                 </p>
                 <figure>
-                    <video id="fallout4" controls muted poster="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" class="img-fluid">
+                    <video id="fallout4" controls muted poster="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg"
+                        class="img-fluid">
                         <source src="./media/video/Fallout-4-Launch-Trailer.mp4" type="video/mp4" />
                     </video>
                     <figcaption>
@@ -146,20 +161,81 @@
                     </figcaption>
                 </figure>
                 <p>
-                    Exercice : recréer la figure vidéo avec le lecteur poour les deux vidéos nommées "Big_Buck_Bunny_360_10s_1MB.mp4" et "Big_Buck_Bunny_360_10s_1MB.webm". Utilisez l'id "bunny" pour l'élément vidéo.
+                    Exercice : recréer la figure vidéo avec le lecteur poour les deux vidéos nommées
+                    "Big_Buck_Bunny_360_10s_1MB.mp4" et "Big_Buck_Bunny_360_10s_1MB.webm". Utilisez l'id "bunny" pour
+                    l'élément vidéo.
                 </p>
+                <figure>
+                    <video id="bunny" controls muted poster="./images/rentree_sco_24_25-990x500.jpg" class="img-fluid">
+                        <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
+                        <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
+                    </video>
+                    <figcaption>
+                        <button onclick="playMedia('bunny')">Lecture</button>
+                        <button onclick="pauseMedia('bunny')">pause</button>
+                    </figcaption>
+                </figure>
+            </article>
+            <article>
+                <header>
+                    <h2 id="iframe">L'iframe</h2>
+                </header>
+                <p>
+                    L'élément iframe permet d'inserrer une page internet dans le document, mais pas que, il est possible
+                    d'inserrer d'autres types de fichiers, par exemple des pdf ou directement des fichiers vidéos, sons,
+                    etc.
+                </p>
+                <p>
+                    L'iframe permet aussi d'afficher des ressources à l'intérieur depuis la page qui la contient
+                </p>
+                <ul>
+                    <li><a href="./documents/PP3.pdf" target="documents">PP3</a></li>
+                    <li><a href="./media.html" target="documents">Media</a></li>
+                    <li><a href="./exercice-01.html" target="documents">Exo</a></li>
+                    <li><a href="https://geo.dailymotion.com/player.html?video=xs584" target="documents">Vidéo</a></li>
+                </ul>
+                <iframe src="./exercice-01.html" width="100%" height="300px" name="documents">
+                    <p>
+                        Votre navigateur ne permet pas d'afficher les cadres de page
+                    </p>
+                </iframe>
             </article>
             <article>
                 <header>
                     <h2 id="videos-et-audio-hors-site">Vidéos et audio hors site</h2>
                 </header>
-                
-            </article>
-            <article>
-                <header>
-                    <h2 id=""></h2>
-                </header>
-                
+                <h3>Les vidéos</h3>
+                <figure  class="embed-media media-16-9">
+                    <iframe src="https://www.youtube.com/embed/VphbXmHdexQ?si=dDdjuiHfE_Sv8wwM"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </figure>
+                <p>
+                    Le seul soucis dans cette adaptation c'est que si on met une légende à l'intérieur de la balise
+                    figure, elle sera cachée par la vidéo. Pour contrer cela, il faudra mettre la classe CSS de la vidéo
+                    dans une div qui encadrera l'iframe, à l'intérieur de la balise figure.
+                </p>
+                <figure class="embed-media media-16-9">
+                    <iframe src="" allowfullscreen allow="web-share">
+                    </iframe>
+                </figure>
+                <p>
+                    Les ratio dépenderont du besoin, généralement pour les vidéos on aura du 21/9, 16/9 et du 4/3.
+                </p>
+                <figcaption class="embed-media media-297-21">
+                    <iframe src="./documents/PP3.pdf"></iframe>
+                </figcaption>
+                <h3>L'audio</h3>
+                <p>
+                    Même principe que pour les sites de vidéo, en revanche l'adaptatif est généralement déjà intégré aux iframes proposées
+                </p>
+                <h4>Bandcamp</h4>
+                <figure>
+                    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3373107829/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://merex.bandcamp.com/album/triceratops-stegosaurus">Triceratops / Stegosaurus de ME REX</a></iframe>
+                </figure>
+                <h4>Spotify</h4>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/2iiHXmqz7N9seX62wjTPxu?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </article>
         </section>
     </main>
@@ -172,4 +248,5 @@
         <a href="#top" title="retour en haut"><i class="bi bi-arrow-up-circle-fill"></i></a>
     </div>
 </body>
+
 </html>
