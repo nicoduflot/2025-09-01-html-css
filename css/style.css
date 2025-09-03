@@ -62,6 +62,11 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage de l'appareil
     right: 0.5rem;
     bottom: 0.5rem;
     border-radius: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /*
     padding-top: 1em;
     padding-right: 0.5em;
@@ -71,9 +76,13 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage de l'appareil
 }
 
 .go-top a{
-    color: darkorange;
-    padding: 0.5rem 1rem;
+    color: rgba(255, 140, 0, 0.5);
     display: block;
+    font-size: 2.5rem;
+}
+
+.go-top a:hover{
+    color: darkorange;
 }
 
 .container{
