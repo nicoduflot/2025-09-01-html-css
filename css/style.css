@@ -37,6 +37,17 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage de l'appareil
     box-sizing: border-box;
 }
 
+figure{
+    background-color: #333;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+figcaption{
+    color: white;
+    text-align: left;
+}
+
 /* déclarations classes et id */
 #exemple-de-tableau,
 #tableau-simple {
@@ -96,6 +107,19 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage de l'appareil
     font-size: 1.7rem;
     line-height: 2.2rem;
     letter-spacing: 0.15rem;
+}
+
+.img-fluid{
+    max-width: 100%;
+}
+
+.left{
+    float: left;
+    margin-right: 0.5rem;
+}
+
+.clear{
+    clear: both;
 }
 
 /* déclarations de structure */

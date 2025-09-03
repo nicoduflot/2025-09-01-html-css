@@ -37,16 +37,79 @@
         <aside>
             <nav>
                 <ul>
-                    <li><a href="#balises-html-de-contenu-de-texte">Balises HTML de contenu de texte</a></li>
-                    <li><a href="#balises-html-de-modification-du-texte">Balises HTML de modification du texte</a></li>
-                    <li><a href="#mise-a-zero-du-css">Mise à "zéro" CSS</a></li>
-                    <li><a href="#dimensions-web-en-css">Dimensions web en CSS</a></li>
-                    <li><a href="#les-positions">Les positions</a></li>
-                    <li><a href="#le-css-adaptatif">Le CSS adaptatif</a></li>
+                    <li><a href="#les-images">Les images</a></li>
+                    <li><a href="#audio">L'élément audio</a></li>
+                    <li><a href="#video">L'élément vidéo</a></li>
+                    <li><a href="#iframe">Les iframes</a></li>
+                    <li><a href="#videos-et-audio-hors-site">Vidéos et audio hors site</a></li>
                 </ul>
             </nav>
         </aside>
         <section>
+            <article>
+                <header>
+                    <h2 id="les-images">Les images</h2>
+                </header>
+                <p>
+                    Les images peuvent être affichées à l'aide de deux balises : img et picture
+                </p>
+                <h3>img</h3>
+                <p>
+                    img est une balise qui une fois écrite, va aller chercher l'image source et l'afficher à sa place.
+                    Si rien d'autre n'est précisé, l'image s'affiche à sa taille originale. Si on change, par exemple,
+                    sa largeur, la hauteur qui le ratio (l'homothétie, le rapport hauter / largeur)
+                </p>
+                <p>
+                    Une image peut être appelé dans un paragraphe : <img src="./images/james-white-composite-400w.png" alt="Image composée de 9 miniatures représentant des illustration dans le style synthwave par le designer James White" class="img-fluid left" />, qui est intégrée dans le flux du texte du paragraphe.
+                </p>
+                <p class="clear">
+                    Images hors paragraphe :
+                </p>
+                <img src="./images/james-white-composite-400w.png" alt="Image composée de 9 miniatures représentant des illustration dans le style synthwave par le designer James White" class="img-fluid" />
+                <h3>Figure</h3>
+                <p>
+                    Il existe une balise conteneur pour les media, qui aide la sémantique web pour le référencement et l'accessibilité. la balise figure va encadrer un media, et donne la possibilité d'y ajouter une légende, avec la balise figcaption.
+                </p>
+                <figure>
+                    <img loading="lazy" src="./images/synthwave-vibe-james-white-signalnoise-w400.png" alt="Illustration d'une moto et son motard avec un soleil couchant dans le style graphique synthwave" class="img-fluid" />
+                    <figcaption>
+                        Illustration pour une pochette d'album de music synthwave, créée par le designer James White
+                    </figcaption>
+                </figure>
+                <p>
+                    La légende sera rattachée sémantiquement à l'image et son texte alternatif, ce qui améliorera le
+                    référencement.
+                </p>
+                <h3>Picture</h3>
+                <p>
+                    La balise picture permet de faire de l'affichage d'image adaptatif : selon la taille disponible
+                    autour de l'image affichée, on peut sélectionner la même image dans des formats différents.
+                </p>
+                <figure>
+                    <picture>
+                        <source srcset="./images/doc-signal-394w.png" media="(min-width: 600px)" />
+                        <source srcset="./images/doc-signal-250w.png" media="(min-width: 400px)" />
+                        <img src="./images/doc-signal-200w.png" class="img-fluid" alt="..." />
+                    </picture>
+                </figure>
+            </article>
+            <article>
+                <header>
+                    <h2 id="audio">L'élément audio</h2>
+                </header>
+            </article>
+            <article>
+                <header>
+                    <h2 id="video">L'élément vidéo</h2>
+                </header>
+                
+            </article>
+            <article>
+                <header>
+                    <h2 id="videos-et-audio-hors-site">Vidéos et audio hors site</h2>
+                </header>
+                
+            </article>
             <article>
                 <header>
                     <h2 id=""></h2>
