@@ -105,17 +105,98 @@
                             Veuillez indiquer votre nom d'usage, il est obligatoire
                         </div>
                         <p>
-                            <label for="nom">Email* :</label>
+                            <label for="email">Email* :</label>
                             <input type="email" name="email" id="email" required="required" aria-describedby="info-email" 
                             pattern="^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,15}$"/>
                         </p>
                         <div id="info-email" class="info-form">
                             Veuillez indiquer votre email, il est obligatoire
                         </div>
+                        <p>
+                            <input type="text" name="surnom" id="surnom" placeholder="Votre surnom ?" aria-label="Surnom" aria-describedby="info-surnom" />
+                        </p>
+                        <div id="info-surnom">
+                            Indiquez ici votre surnom, ce champ n'est pas obligatoire.
+                        </div>
+                        <p>
+                            <label id="age-legal">Votre age :</label>
+                            <input type="number" name="age" id="age" min="13" max="99" aria-labelledby="age-legal" aria-describedby="info-age" required />
+                        </p>
+                        <div id="info-age">
+                            Vous devez jurer avoir minimum 13 ans pour soumettre une demande, ce champs est obligatoire
+                        </div>
                     </fieldset>
                     <fieldset>
                         <legend>Votre demande</legend>
-                        
+                        <p>
+                            <label for="type-demande">Type de la demande</label>
+                            <select name="type-demande" id="type-demande" aria-describedby="info-demande" required>
+                                <option>Choisir votre type de demande</option>
+                                <optgroup label="Options unitaires">
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </optgroup>
+                                <optgroup label="Toutes les options sauf :">
+                                    <option value="6">Toutes les options sauf la 1</option>
+                                    <option value="7">Toutes les options sauf la 2</option>
+                                    <option value="8">Toutes les options sauf la 3</option>
+                                </optgroup>
+                            </select>
+                        </p>
+                        <div id="info-demande">
+                            Indiquez le type de demande, ce champ est obligatoire.
+                        </div>
+                        <p>
+                            <label>Vous représentez : </label>
+                        </p>
+                        <p>
+                            <input type="radio" name="personne" id="physique" value="physique" checked aria-describedby="info-representation" /> <label for="physique">Personne physique (particulier)</label><br />
+                            <input type="radio" name="personne" id="morale" value="morale" aria-describedby="info-representation" /> <label for="morale">Personne morale (Entreprise, asso, club, etc.)</label>
+                        </p>
+                        <div id="info-representation">
+                            Veuillez indiquez si vous représenté une personne physique (un particulier) ou une personne morale (Un entreprise, une asso...).
+                        </div>
+                        <p>
+                            <label>Type de diffusion : </label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="diff-email" id="diff-email" value="email" aria-describedby="info-diffusion" /> <label for="diff-email">Campagne d'emailing</label><br />
+                            <input type="checkbox" name="diff-tel" id="diff-tel" value="tel" aria-describedby="info-diffusion" /> <label for="diff-tel">Télé-opérateurs</label><br />
+                            <input type="checkbox" name="diff-radio" id="diff-radio" value="radio" aria-describedby="info-diffusion" /> <label for="diff-email">Publicités radiophoniques</label><br />
+                            <input type="checkbox" name="diff-tv" id="diff-tv" value="tv" aria-describedby="info-diffusion" /> <label for="diff-email">Publicités télévisuelles</label><br />
+                        </p>
+                        <div id="info-diffusion">
+                            Veuillez indiquez le type de diffusion souhaitée, si aucune n'est cochée un commercial vous contactera.
+                        </div>
+                        <p>
+                            <input aria-label="exemple-range" class="form-range" type="range" name="range" id="range" min="0" max="10" step="0.5" value="5" /> 
+                            <span id="rangeValue">5</span>
+                            <script>
+                                const range = document.getElementById('range');
+                                const rangeValue = document.getElementById('rangeValue');
+                                range.addEventListener('change', function(){
+                                    rangeValue.innerHTML = range.value;
+                                });
+                            </script>
+                        </p>
+                        <p>
+                            <input aria-label="exemple-color" type="color" name="color" id="color" /> 
+                            <span id="colorValue">#000000</span>
+                            <script>
+                                const color = document.getElementById('color');
+                                const colorValue = document.getElementById('colorValue');
+                                color.addEventListener('change', function(){
+                                    colorValue.innerHTML = color.value;
+                                });
+                            </script>
+                        </p>
+                        <p>
+                            <label for="message">Détails de votre demande</label><br />
+                            <textarea name="message" id="message" required placeholder="Décrivez votre demande"></textarea>
+                        </p>
                     </fieldset>
                     <p>
                         Les champs marqués d'un asterisque sont obligatoires.
