@@ -261,7 +261,21 @@ form textarea{
     padding-bottom: calc( 21 / 29.7 * 100% );
 }
 
+.info-form{
+    font-size: 0.8rem;
+    font-style: italic;
+    border: 2px solid rgb(3, 99, 141);
+    background-color: rgb(157, 208, 231);
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+}
 
+.info-form::before{
+    font-family: 'bootstrap-icons';
+    content: "\f430";
+    font-style: normal;
+    color: rgb(3, 99, 141);
+}
 
 /* déclarations de structure */
 
