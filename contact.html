@@ -99,7 +99,7 @@
                         <legend>Informations Personnelles</legend>
                         <p>
                             <label for="nom">Nom* :</label>
-                            <input type="text" name="nom" id="nom" required="required" aria-describedby="info-nom" />
+                            <input type="text" name="nom" id="nom" required="required" aria-describedby="info-nom" autofocus />
                         </p>
                         <div id="info-nom" class="info-form">
                             Veuillez indiquer votre nom d'usage, il est obligatoire
@@ -202,7 +202,9 @@
                         Les champs marqués d'un asterisque sont obligatoires.
                     </p>
                     <p>
-                        <button type="submit">Envoyer</button>
+                        <button type="submit">Envoyer</button> 
+                        <button type="reset">Effacer le formulaire</button> 
+                        <button type="button">Un bouton</button>
                     </p>
                 </form>
             </article>
